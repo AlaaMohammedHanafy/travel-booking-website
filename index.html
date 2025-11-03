@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title displayed in browser tab -->
+    <title>Travel with Me - Book Your Dream Trip</title>
+    
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main booking form container -->
+    <div class="form-container">
+        <form action="#" method="POST">
+            <!-- Header section with title and description -->
+            <header class="form-header">
+                <h1>Your Dream Journey Starts Here</h1>
+                <p>Share your travel details with us and we'll craft the perfect itinerary tailored just for you. Our travel experts will respond within 24 hours.</p>
+            </header>
+
+            <!-- Personal Information Section -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <!-- Full Name input field -->
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        placeholder="Enter your full name"
+                        autocomplete="name">
+                </div>
+
+                <!-- Email input field with proper email validation -->
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="example@email.com"
+                        autocomplete="email">
+                </div>
+
+                <!-- Phone number input field -->
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        required 
+                        placeholder="+20 123 456 7890"
+                        autocomplete="tel">
+                </div>
+
+                <!-- Gender selection using radio buttons -->
+                <div class="form-group">
+                    <label>Gender <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="gender" id="male" value="male" required>
+                            <label class="inline-label" for="male">Male</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="gender" id="female" value="female" required>
+                            <label class="inline-label" for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Travel Details Section -->
+            <fieldset>
+                <legend>Travel Details</legend>
+                
+                <!-- Arrival date picker -->
+                <div class="form-group">
+                    <label for="arrival-date">Arrival Date <span class="required">*</span></label>
+                    <input 
+                        type="date" 
+                        id="arrival-date" 
+                        name="arrival-date" 
+                        required>
+                </div>
+
+                <!-- Departure date picker -->
+                <div class="form-group">
+                    <label for="departure-date">Departure Date <span class="required">*</span></label>
+                    <input 
+                        type="date" 
+                        id="departure-date" 
+                        name="departure-date" 
+                        required>
+                </div>
+
+                <!-- Destination city dropdown -->
+                <div class="form-group">
+                    <label for="cities">Where Would You Like to Travel? <span class="required">*</span></label>
+                    <select name="cities" id="cities" required>
+                        <option value="">Choose a destination</option>
+                        <option value="cairo">Cairo - The City of a Thousand Minarets</option>
+                        <option value="alexandria">Alexandria - The Pearl of the Mediterranean</option>
+                        <option value="aswan">Aswan - The Jewel of the Nile</option>
+                        <option value="luxor">Luxor - The World's Greatest Open-Air Museum</option>
+                        <option value="hurghada">Hurghada - Red Sea Paradise</option>
+                    </select>
+                </div>
+
+                <!-- Passport file upload -->
+                <div class="form-group">
+                    <label for="passport">Upload Passport Copy</label>
+                    <input 
+                        type="file" 
+                        name="passport" 
+                        id="passport"
+                        accept=".pdf,.jpg,.jpeg,.png">
+                    <small>Accepted formats: PDF, JPG, PNG (Max 5MB)</small>
+                </div>
+            </fieldset>
+
+            <!-- Services Selection Section -->
+            <fieldset>
+                <legend>Required Services</legend>
+                
+                <div class="form-group">
+                    <label>Please check the services you need:</label>
+                    
+                    <!-- Checkbox options for different services -->
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" name="services" id="airline-tickets" value="airline">
+                            <label for="airline-tickets" class="inline-label">✈️ Airline Tickets</label>
+                        </div>
+
+                        <div class="checkbox-option">
+                            <input type="checkbox" name="services" id="rental-car" value="rental-car">
+                            <label for="rental-car" class="inline-label">🚗 Rental Car</label>
+                        </div>
+
+                        <div class="checkbox-option">
+                            <input type="checkbox" name="services" id="hotel" value="hotel">
+                            <label for="hotel" class="inline-label">🏨 Hotel Accommodations</label>
+                        </div>
+
+                        <div class="checkbox-option">
+                            <input type="checkbox" name="services" id="tours" value="tours">
+                            <label for="tours" class="inline-label">🎭 Guided Tours</label>
+                        </div>
+
+                        <div class="checkbox-option">
+                            <input type="checkbox" name="services" id="insurance" value="insurance">
+                            <label for="insurance" class="inline-label">🛡️ Travel Insurance</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional comments/requests textarea -->
+                <div class="form-group">
+                    <label for="comments">Special Requests or Comments</label>
+                    <textarea 
+                        id="comments" 
+                        name="comments" 
+                        rows="4" 
+                        placeholder="Tell us about any special requirements, dietary restrictions, or preferences..."></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Form action buttons -->
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">
+                    <span>✓</span> Submit Booking Request
+                </button>
+                <button type="reset" class="btn btn-secondary">
+                    <span>↻</span> Reset Form
+                </button>
+            </div>
+
+            <!-- Privacy notice -->
+            <p class="privacy-notice">
+                🔒 Your information is secure and will only be used to process your booking request.
+            </p>
+        </form>
+    </div>
+</body>
+</html>

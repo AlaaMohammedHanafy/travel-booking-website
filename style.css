@@ -1,0 +1,430 @@
+/* ===================================
+   PROFESSIONAL TRAVEL BOOKING WEBSITE
+   CSS Stylesheet with Complete Comments
+   =================================== */
+
+/* ----------------
+   GLOBAL STYLES
+   ---------------- */
+
+/* Reset default margins and apply box-sizing to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML background with travel-themed image */
+html {
+    background-image: url("travel.jpg");
+    background-size: cover;        /* Scale image to cover entire viewport */
+    background-repeat: no-repeat;  /* Prevent image tiling */
+    background-position: center;   /* Center the background image */
+    background-attachment: fixed;  /* Keep background fixed while scrolling */
+    min-height: 100vh;            /* Ensure full viewport height */
+}
+
+/* Main body container styling */
+body {
+    font-family: 'Raleway', Arial, sans-serif;  /* Modern, clean font */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* ----------------
+   FORM CONTAINER
+   ---------------- */
+
+/* Main form wrapper with semi-transparent background */
+.form-container {
+    background: rgba(255, 255, 255, 0.95);  /* White with 95% opacity */
+    max-width: 800px;                       /* Maximum width for readability */
+    width: 90%;                             /* Responsive width */
+    margin: 40px auto;                      /* Center horizontally with top/bottom spacing */
+    padding: 40px;
+    border-radius: 15px;                    /* Rounded corners for modern look */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);  /* Elevated shadow effect */
+}
+
+/* ----------------
+   FORM HEADER
+   ---------------- */
+
+/* Header section at top of form */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #3498db;  /* Blue accent line */
+}
+
+/* Main heading styling */
+.form-header h1 {
+    color: #2c3e50;                    /* Dark blue-gray */
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* Subtitle paragraph styling */
+.form-header p {
+    color: #7f8c8d;                    /* Medium gray */
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/* ----------------
+   FIELDSET STYLING
+   ---------------- */
+
+/* Fieldset groups related form elements together */
+fieldset {
+    border: 2px solid #e0e0e0;         /* Light gray border */
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: rgba(248, 249, 250, 0.5);  /* Very light background */
+}
+
+/* Legend is the title for each fieldset */
+fieldset legend {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #3498db;                    /* Blue accent color */
+    padding: 0 10px;
+}
+
+/* ----------------
+   FORM GROUPS
+   ---------------- */
+
+/* Each form field is wrapped in a form-group for consistent spacing */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling for all form fields */
+.form-group label {
+    display: block;                    /* Labels appear above inputs */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.95em;
+}
+
+/* Red asterisk for required fields */
+.required {
+    color: #e74c3c;                    /* Red color */
+    font-weight: bold;
+}
+
+/* ----------------
+   INPUT FIELDS
+   ---------------- */
+
+/* General styling for all text inputs, email, tel, date, and select fields */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+    width: 100%;                       /* Full width of container */
+    padding: 12px 15px;
+    border: 2px solid #dfe4ea;         /* Light gray border */
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: all 0.3s ease;         /* Smooth transition on focus */
+    background-color: #fff;
+}
+
+/* Focus state - when user clicks on input field */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;                     /* Remove default browser outline */
+    border-color: #3498db;             /* Blue border on focus */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);  /* Subtle blue glow */
+}
+
+/* Placeholder text styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #95a5a6;                    /* Light gray */
+    font-style: italic;
+}
+
+/* ----------------
+   SELECT DROPDOWN
+   ---------------- */
+
+/* Custom styling for dropdown select boxes */
+.form-group select {
+    cursor: pointer;                   /* Show pointer cursor on hover */
+    appearance: none;                  /* Remove default browser styling */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 40px;               /* Space for dropdown arrow */
+}
+
+/* Dropdown options styling */
+.form-group select option {
+    padding: 10px;
+    background: #fff;
+    color: #333;
+}
+
+/* ----------------
+   RADIO BUTTONS
+   ---------------- */
+
+/* Container for radio button group */
+.radio-group {
+    display: flex;                     /* Flexbox for horizontal layout */
+    gap: 20px;                         /* Space between options */
+    flex-wrap: wrap;                   /* Wrap on small screens */
+}
+
+/* Individual radio option container */
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Radio button styling */
+.radio-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #3498db;             /* Blue color for selected state */
+}
+
+/* ----------------
+   CHECKBOXES
+   ---------------- */
+
+/* Container for checkbox group */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;            /* Stack checkboxes vertically */
+    gap: 12px;
+}
+
+/* Individual checkbox option container */
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+/* Hover effect for checkbox options */
+.checkbox-option:hover {
+    background: rgba(52, 152, 219, 0.05);  /* Light blue background on hover */
+}
+
+/* Checkbox styling */
+.checkbox-option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #3498db;             /* Blue color for checked state */
+}
+
+/* Inline labels for radio and checkbox options */
+.inline-label {
+    cursor: pointer;
+    user-select: none;                 /* Prevent text selection on click */
+    font-weight: 400;
+}
+
+/* ----------------
+   TEXTAREA
+   ---------------- */
+
+/* Multi-line text area for comments */
+.form-group textarea {
+    min-height: 120px;                 /* Minimum height */
+    resize: vertical;                  /* Allow vertical resizing only */
+    font-family: inherit;
+}
+
+/* ----------------
+   FILE INPUT
+   ---------------- */
+
+/* File upload input styling */
+.form-group input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+    border-style: dashed;              /* Dashed border for upload area */
+}
+
+/* Helper text below file input */
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #7f8c8d;
+    font-size: 0.85em;
+}
+
+/* ----------------
+   BUTTONS
+   ---------------- */
+
+/* Container for form buttons */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;                   /* Stack on mobile */
+}
+
+/* Base button styling */
+.btn {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+}
+
+/* Primary button (Submit) - Blue */
+.btn-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);  /* Blue gradient */
+    color: white;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Primary button hover state */
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2980b9, #21618c);  /* Darker blue */
+    transform: translateY(-2px);       /* Lift effect */
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* Secondary button (Reset) - Gray */
+.btn-secondary {
+    background: #95a5a6;               /* Gray background */
+    color: white;
+    box-shadow: 0 4px 15px rgba(149, 165, 166, 0.3);
+}
+
+/* Secondary button hover state */
+.btn-secondary:hover {
+    background: #7f8c8d;               /* Darker gray */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(149, 165, 166, 0.4);
+}
+
+/* Active state when button is clicked */
+.btn:active {
+    transform: translateY(0);          /* Remove lift effect */
+}
+
+/* ----------------
+   PRIVACY NOTICE
+   ---------------- */
+
+/* Small privacy text at bottom of form */
+.privacy-notice {
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d;
+    font-size: 0.9em;
+    padding: 15px;
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 6px;
+}
+
+/* ----------------
+   RESPONSIVE DESIGN
+   ---------------- */
+
+/* Tablet styles - screens smaller than 768px */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 25px;
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .form-header h1 {
+        font-size: 1.8em;
+    }
+    
+    fieldset {
+        padding: 15px;
+    }
+    
+    .button-group {
+        flex-direction: column;        /* Stack buttons vertically */
+    }
+    
+    .btn {
+        width: 100%;                   /* Full width buttons on mobile */
+        justify-content: center;
+    }
+}
+
+/* Mobile styles - screens smaller than 480px */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+    
+    .form-header h1 {
+        font-size: 1.5em;
+    }
+    
+    .radio-group {
+        flex-direction: column;        /* Stack radio buttons vertically */
+    }
+}
+
+/* ----------------
+   ACCESSIBILITY
+   ---------------- */
+
+/* Skip to main content link for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #3498db;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+}
