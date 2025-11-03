@@ -70,7 +70,4 @@ This project is open source and available under the [MIT License](LICENSE).
 - GitHub: [@AlaaMohammedHanafy](https://github.com/AlaaMohammedHanafy)
 - LinkedIn: [www.linkedin.com/in/alaa-mohammed-hanafy-06677a264]
 
----
-⭐ If you found this helpful, please give it a star!
-
 
